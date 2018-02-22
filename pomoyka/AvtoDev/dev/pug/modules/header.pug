@@ -1,0 +1,29 @@
+header
+	.container
+		.logo
+			a(href="index.html").logo__link
+				img(src="static/img/general/logo.png", alt="infoAuto").logo__img
+		nav.main-nav
+			ul.main-nav__list
+				li.main-nav__item
+					a.main-nav__link(href="#") Главная
+				li.main-nav__item.main-nav__item--repair
+					a.main-nav__link(href="#") Ремонт
+					+icon("arrow_down")
+					.repair-nav
+						ul.repair-nav__list
+							li.repair-nav__item
+								a.repair-nav__link(href="#") Ремонт подвески автомобиля
+							li.repair-nav__item
+								a.repair-nav__link(href="#") Ремонт МКПП
+							li.repair-nav__item
+								a.repair-nav__link(href="#") Ремонт тормозной системы
+							li.repair-nav__item
+								a.repair-nav__link(href="#") Ремонт сцепления
+
+				li.main-nav__item
+					a.main-nav__link(href="#") Советы
+				li.main-nav__item
+					a.main-nav__link(href="#") Отзывы
+				li.main-nav__item
+					a.main-nav__link(href="#") Контакты
