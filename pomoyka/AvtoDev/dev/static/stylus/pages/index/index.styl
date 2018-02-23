@@ -5,6 +5,7 @@
 	background-attachment fixed
 	background-position center center
 	position relative
+	border-bottom 5px solid #eee
 	// &:after
 	// 	content ""
 	// 	position absolute
@@ -96,12 +97,23 @@
 		width 100%
 		&:last-child
 			margin-bottom 0
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
 	::-webkit-input-placeholder 
 		color #c0392b
+		padding-left 10px
 	::-moz-placeholder         
 		color #c0392b
+		padding-left 10px
 	:-moz-placeholder           
 		color #c0392b
+		padding-left 10px
 	:-ms-input-placeholder 
 		color:#c0392b
-		
+		padding-left 10px
