@@ -1,0 +1,121 @@
+.main-banner
+	padding 120px 0
+	background url("../img/content/main-banner.png")
+	background-size cover
+	background-attachment fixed
+	background-position center center
+	position relative
+	border-bottom 5px solid #eee
+	// &:after
+	// 	content ""
+	// 	position absolute
+	// 	background rgba(0, 0, 0, .2	)
+	// 	left 0
+	// 	top 0
+	// 	right 0
+	// 	bottom 0
+	// 	width 100%
+	// 	height 100%
+		
+	.container
+		display flex
+		align-items center
+		justify-content space-between
+.info
+	max-width 540px
+	width 100%
+	display flex
+	flex-direction column
+	align-items flex-start
+		
+	&__title
+		text-transform uppercase
+		font-size rem(50)
+		font-family ralboldFont
+		font-weight 700
+		margin-bottom 10px
+		color white
+		&--selected
+			color orangeColor
+	&__quote
+		display block
+		font-family titleFont
+		font-size rem(36)
+		color white
+		text-transform uppercase
+		text-shadow 0px 0px 10px black
+		
+		&:after
+			
+			content ""
+			display block
+			margin 30px 0
+			height 2px
+			width 50px
+			background-color white
+	
+	&__description
+		color white
+		font-weight 300
+		line-height 23px
+		font-family titleFont
+		margin-bottom 30px
+		text-shadow 0px 0px 10px black
+		
+.advice
+	max-width 360px
+	width 100%
+	
+.advice-text
+	background-color grayColor
+	border-top-left-radius 5px
+	border-top-right-radius 5px
+	text-align center
+	padding 15px 0
+	&__title
+		display inline-block
+		text-transform lowercase
+		color black
+		font-family boldFont
+		font-weight 700
+		font-size rem(20)
+		
+		&--selected
+			text-transform uppercase
+			color lightOrangeColor
+
+.advice-form
+	text-align center
+	background-color white
+	padding 30px 0 60px
+	
+	&__inpt
+		max-width 285px
+		min-width 250px
+		margin-bottom 35px
+		border none
+		box-shadow 0 1px 0 rgba(0, 0, 1, 0.16)
+		font-size rem(14)
+		width 100%
+		&:last-child
+			margin-bottom 0
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+	::-webkit-input-placeholder 
+		color #c0392b
+		padding-left 10px
+	::-moz-placeholder         
+		color #c0392b
+		padding-left 10px
+	:-moz-placeholder           
+		color #c0392b
+		padding-left 10px
+	:-ms-input-placeholder 
+		color:#c0392b
+		padding-left 10px
