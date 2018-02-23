@@ -1,11 +1,12 @@
+// BANNER
+
 .main-banner
-	padding 120px 0
-	background url("../img/content/main-banner.png")
+	padding 80px 0
+	background url("../img/content/main-banner.jpg")
 	background-size cover
-	background-attachment fixed
 	background-position center center
 	position relative
-	border-bottom 5px solid #eee
+	border-bottom 5px solid darkGrayColor
 	
 	.container
 		display flex
@@ -66,14 +67,12 @@
 	padding 15px 0
 	&__title
 		display inline-block
-		text-transform lowercase
 		color black
 		font-family boldFont
 		font-weight 700
 		font-size rem(20)
 		
 		&--selected
-			text-transform uppercase
 			color lightOrangeColor
 
 .advice-form
@@ -108,3 +107,52 @@
 		color #cecece
 	:-ms-input-placeholder 
 		color #cecece
+
+
+// SOCIAL
+
+.social
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.38)
+	.container
+		display flex
+		justify-content space-between
+		align-items center
+		padding 20px 0
+
+.social-text
+	max-width 375px	
+	width 100%
+	
+	&__title
+		display block
+		font-size rem(20)
+		font-weight 700
+		margin-bottom 10px
+	
+	&__description
+		font-size rem(14)
+		line-height 20px
+		font-weight 400
+		color darkGrayColor
+
+.social-nav
+	margin-right 40px
+	
+	&__list
+		display flex
+		align-items center
+	&__item
+		margin-right 40px
+		
+		&:last-child
+			margin-right 0
+			
+	&__link
+		display block
+		.icon
+			fill #ccc
+			size(45px)
+			transition .2s ease-in-out
+			
+			&:hover
+				fill orangeColor
