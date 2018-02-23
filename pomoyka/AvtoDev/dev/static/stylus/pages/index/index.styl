@@ -1,8 +1,9 @@
+// BANNER
+
 .main-banner
 	padding 80px 0
 	background url("../img/content/main-banner.jpg")
 	background-size cover
-	background-attachment fixed
 	background-position center center
 	position relative
 	border-bottom 5px solid darkGrayColor
@@ -66,14 +67,12 @@
 	padding 15px 0
 	&__title
 		display inline-block
-		text-transform lowercase
 		color black
 		font-family boldFont
 		font-weight 700
 		font-size rem(20)
 		
 		&--selected
-			text-transform uppercase
 			color lightOrangeColor
 
 .advice-form
@@ -153,3 +152,7 @@
 		.icon
 			fill #ccc
 			size(45px)
+			transition .2s ease-in-out
+			
+			&:hover
+				fill orangeColor
