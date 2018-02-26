@@ -35,7 +35,7 @@ $(document).ready(function () {
             }
                 elemActive = $(".categories-nav__item.is-active");
                 $(".tab-item").removeClass('is-active').eq(elemActive.index()).addClass('is-active');
-        }, 5000)
+        }, 10000)
     })(jQuery);
 
 });
