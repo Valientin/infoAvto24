@@ -20,6 +20,22 @@ $(document).ready(function () {
     		$(this).addClass('is-active').siblings().removeClass('is-active')
     		.closest('.container').find(".tab-item").removeClass('is-active').eq($(this).index()).addClass('is-active');
     	});
+
+        setInterval(function(){
+            var elemList = $(".categories-nav__item");
+            var elemActive = $(".categories-nav__item.is-active");
+            let updateClass = (elem) => {
+                elem.addClass('is-active').siblings().removeClass('is-active');
+            };
+
+            if(elemActive.index() === elemList.eq(3).index()){
+                updateClass(elemList.eq(0));
+            } else{
+                updateClass(elemActive.next());
+            }
+                elemActive = $(".categories-nav__item.is-active");
+                $(".tab-item").removeClass('is-active').eq(elemActive.index()).addClass('is-active');
+        }, 5000)
     })(jQuery);
 
 });
