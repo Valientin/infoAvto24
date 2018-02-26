@@ -45,7 +45,7 @@ header
 				margin-top 4px
 				fill white
 	
-.repair-nav
+.repair-nav-wrapper
 	display none
 	position absolute
 	width 100%
@@ -62,21 +62,45 @@ header
 		display flex
 		opacity 1
 		z-index 2
+
+.repair-nav-inner	
+	padding-top 10px
+	background-color black
+	flex-grow 2
+	margin-right 7px	
+	
+	&:last-child
+		flex-grow 1
+		margin-right 0
+		
+.repair-nav	
+	display flex
+	justify-content space-between
+	padding 0 30px
 	&__list
-		padding 10px 0 10px 0
-		margin-right 7px
 		text-align left
-		background-color black
-		flex-grow 2px
-		&:last-child
-			flex-grow 1px
-			margin-right 0
+		
+	&__title
+		color darkGrayColor
+		text-align center
+		display block
 		
 	&__item
 		padding 10px 10px
 		white-space nowrap
-		&:hover
-			background-color orangeColor
+		display flex
+		align-items center
+		
+		.icon
+			size(50px)
+			margin-right 20px
+			
 	&__link
 		display block
 		color white
+		transition all .1s ease-in-out
+		&:hover
+			color orangeColor
+			
+			.icon
+				fill orangeColor

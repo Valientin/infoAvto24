@@ -4,7 +4,7 @@ $(document).ready(function () {
     (function dropDownMenu($){
 
 		$(".main-nav__item--repair").hover(function(){
-			$(this).find(".repair-nav").toggleClass('is-active');
+			$(this).find(".repair-nav-wrapper").toggleClass('is-active');
 		});
     	
     })(jQuery);
