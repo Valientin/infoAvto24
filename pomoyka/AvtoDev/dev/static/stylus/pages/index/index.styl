@@ -118,8 +118,7 @@
 // SOCIAL
 
 .social
-	box-shadow 0 1px 3px rgba(0, 0, 0, 0.38)
-	background-color grayColor
+	border-bottom 2px solid rgba(0, 0, 0, 0.2)
 	
 	.container
 		display flex
@@ -170,7 +169,8 @@
 //CATEGORIES
 
 .categories
-	padding 100px 0
+	padding 80px 0
+	background-color grayColor
 	
 	.container
 		display flex
@@ -243,11 +243,12 @@
 
 // ADVANTAGE
 .advantage
-	padding 100px 0
-	background-color grayColor
+	padding 60px 0
+
 .advantage-text
 	text-align center
 	margin-bottom 80px
+	
 	&__title
 		display inline-block
 		font-family titleFont
@@ -279,6 +280,7 @@
 	flex-direction column
 	align-items center
 	justify-content space-between
+	
 	&__img
 		display flex
 		justify-content center
@@ -287,9 +289,11 @@
 		border 2px solid lightOrangeColor
 		border-radius 50%
 		margin-bottom 15px
+		
 		.icon
 			size(35px)
 			fill lightOrangeColor
+			
 	&__title
 		font-family boldFont 
 		display block
@@ -298,6 +302,7 @@
 		max-width 280px
 		margin-bottom 20px
 		width 100%
+		
 	&__description
 		color darkGrayColor
 		font-size rem(16)
