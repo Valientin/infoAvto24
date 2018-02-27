@@ -243,9 +243,9 @@
 
 // ADVANTAGE
 .advantage
-	padding 60px 0
+	padding 60px 0px
 
-.advantage-text
+.common-text
 	text-align center
 	margin-bottom 80px
 	
@@ -254,6 +254,7 @@
 		font-family titleFont
 		font-size rem(36)
 		text-transform uppercase
+		margin-bottom 20px
 		
 		&:after
 			content ""
@@ -261,12 +262,13 @@
 			width 20%
 			height 2px
 			background-color lightOrangeColor
-			margin 15px auto 20px auto
+			margin 15px auto 0 auto
 			
 	&__description
 		display block
 		font-size rem(14)
 		color darkGrayColor
+		font-weight 400
 
 .advantage-items
 	display flex
@@ -308,3 +310,264 @@
 		font-size rem(16)
 		max-width 350px	
 		width 100%
+		line-height 20px
+
+
+//ARTICLE
+.article
+	padding 60px 0px
+	background-color grayColor
+	
+.article-items
+	display flex
+	justify-content space-between
+	align-items flex-end
+
+.artcle-item
+	max-width 350px
+	width 100%
+
+.article-head
+	display flex
+	flex-direction column
+	align-items center
+	background-color lightBlackColor
+	text-align center
+	border-bottom 5px solid darkOrangeColor
+	
+	&__name
+		width 100%
+		padding 15px 0px
+		color white
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+		border-bottom 1px solid white
+		text-transform uppercase
+		
+	&__title
+		width 100%
+		padding 35px 0px
+		color white
+		font-family ralboldFont
+		border-bottom 1px solid white
+		font-size rem(35)
+	
+	&__part
+		font-family semiboldFont
+		font-style italic
+		color white
+		opacity .5
+		padding 15px 0
+		font-size rem(14)
+
+	&__active
+		background-color darkOrangeColor
+		width 100%
+		color white
+		padding 15px 0
+		text-transform uppercase
+		font-family boldFont
+		font-weight 700
+		
+.article-head.active
+	border-bottom none
+	
+.article-nav
+	background-color white
+
+	li
+		
+		&:hover
+			
+			.article-nav__link
+				color darkOrangeColor
+		
+	&__link
+		text-align center
+		width 100%
+		margin auto
+		padding 10px 30px
+		display block
+		padding 10px 30px
+		font-size rem(14)
+		border-bottom 1px solid grayColor
+		text-transform uppercase
+		cursor pointer
+		color darkGrayColor
+
+
+// COMMENT
+.comment
+	padding 60px 0px
+
+.comment-items
+	display flex
+	justify-content space-between
+
+	
+.comment-item
+	max-width 300px
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+
+	&__text
+		display block
+		background-color grayColor
+		padding 15px
+		position relative
+		font-size rem(14)
+		font-style italic
+		color darkGrayColor
+		border-radius 5px
+		margin-bottom 25px
+		line-height 22px
+		
+		&.offset
+			padding 10px
+		
+		&:after
+			content ""
+			position absolute
+			top 100%	
+			left 25px
+			border: 13px solid transparent;	border-top: 17px solid grayColor;
+			
+
+.comment-person
+	display flex
+	align-items center
+	
+	&__foto
+		margin-right 15px
+		
+.person-text
+	
+	&__name
+		display block
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+	
+	&__work 
+		display block
+		font-size rem(14)
+		color darkGrayColor
+
+
+//FEEDBACK
+
+.feedback
+	background url("../img/content/feedback-banner.jpg") no-repeat center center
+	background-size cover
+	padding 65px 0px
+	
+	.info-button
+		margin auto
+		display block
+		
+.feedback-text
+	margin-bottom 40px
+	
+	&__title
+		color white 
+		margin-bottom 30px
+		
+		&:after
+			background-color white
+			margin-top 20px
+	&__description
+		font-size rem(16)
+
+// CONTACT
+
+.contact
+	padding 60px 0px
+
+.form-info-inner
+	display flex
+	margin-bottom 40px
+	
+.contact-form
+	.tab-button
+		display block
+		margin auto
+		
+.form-info
+	margin-right 30px
+	
+	input
+		margin-bottom 30px
+		max-width 530px
+		width 100%
+		border none
+		border-bottom 1px solid lightGrayColor
+		padding 10px 0 10px 10px
+		
+		&:last-child
+			margin-bottom 0
+		
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+	
+	&__text
+		max-width 530px
+		width 100%
+		border none
+		border-bottom 1px solid lightGrayColor
+		font-size rem(14)
+		outline none
+		line-height 25px
+		padding 10px 0 10px 10px
+		
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+		
+::-webkit-input-placeholder 
+	color #cecece
+::-moz-placeholder         
+	color #cecece
+:-moz-placeholder           
+	color #cecece
+:-ms-input-placeholder 
+	color #cecece
+
+
+//FOOTER
+
+footer
+	background-color black
+	padding 20px 0 12px 0
+	
+	.container
+		display flex
+		flex-direction column
+		justify-content center
+	.social-nav
+		margin auto
+		margin-bottom 15px
+		&__item
+			margin-right 20px
+		&__link
+			.icon
+				size(22px)
+	
+	.all-right
+		margin auto
+		color white
+		opacity .5
+		font-size rem(12)
