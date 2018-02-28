@@ -335,6 +335,8 @@
 	background-color lightBlackColor
 	text-align center
 	border-bottom 5px solid darkOrangeColor
+	margin-bottom 25px
+	position relative
 	
 	&__name
 		width 100%
@@ -350,9 +352,14 @@
 		width 100%
 		padding 35px 0px
 		color white
+		cursor pointer
 		font-family ralboldFont
 		border-bottom 1px solid white
-		font-size rem(35)
+		font-size rem(28)
+		transition 0.2s
+
+		&:hover
+			color orangeColor
 	
 	&__part
 		font-family semiboldFont
@@ -361,6 +368,15 @@
 		opacity .5
 		padding 15px 0
 		font-size rem(14)
+
+	&::before
+		content ''
+		border 20px solid transparent
+		border-top 20px solid orangeColor
+		position absolute
+		top 100%
+		transform translateX(-50%)
+		left 50%
 
 	&__active
 		background-color darkOrangeColor
@@ -382,17 +398,20 @@
 		&:hover
 			
 			.article-nav__link
-				color darkOrangeColor
+				background orangeColor
+				color white
 		
 	&__link
 		width 100%
 		display block
 		padding 15px
+		text-align center
 		font-size rem(14)
 		white-space nowrap
 		overflow hidden
 		text-overflow ellipsis
-		border-bottom 1px solid grayColor
+		border 1px solid grayColor
+		margin-bottom 5px
 		cursor pointer
 		color darkGrayColor
 
