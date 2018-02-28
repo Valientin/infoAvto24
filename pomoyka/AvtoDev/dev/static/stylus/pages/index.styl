@@ -394,14 +394,6 @@
 .article-nav
 	background-color white
 
-	li
-		
-		&:hover
-			
-			.article-nav__link
-				background orangeColor
-				color white
-		
 	&__link
 		width 100%
 		display block
@@ -415,6 +407,11 @@
 		margin-bottom 5px
 		cursor pointer
 		color darkGrayColor
+		transition .25s ease-in-out
+		
+		&:hover
+			background orangeColor
+			color white
 
 // COMMENT
 

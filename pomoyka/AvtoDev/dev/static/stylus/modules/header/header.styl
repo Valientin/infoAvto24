@@ -1,12 +1,14 @@
 header
 	background-color black
 	height 60px
+	
 	.container
 		position relative
 		height 100%	
 		display flex
 		align-items center
 		justify-content space-between
+		
 .logo
 	display flex
 	align-items center
@@ -19,9 +21,11 @@ header
 
 .main-nav
 	height 100%
+	
 	&__list
 		display flex
 		height 100%
+		
 	&__link
 		color white
 		font-size rem(14)
@@ -31,16 +35,20 @@ header
 		display flex
 		align-items center
 		justify-content center
+		
 	&__item
 		display flex
 		justify-content center
 		align-items center
 		width 110px	
+		transition .3s ease-in-out
 		
 		&:last-child
 			margin-right 0
+			
 		&:hover
 			background-color orangeColor
+			
 		&--repair
 					
 			.icon
