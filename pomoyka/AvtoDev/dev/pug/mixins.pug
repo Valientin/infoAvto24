@@ -2,3 +2,23 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
+
+
+mixin item(title,description,imgUrl,count)
+	
+	if(count)
+		.item.item-dark
+			.container
+				.item-text
+					.item-text__title= title
+					.item-text__description= description
+					.main-button Читать статью
+				img(src= imgUrl, alt= title).item__img
+	else
+		.item
+			.container
+				.item-text
+					.item-text__title= title
+					.item-text__description= description
+					.main-button Читать статью
+				img(src= imgUrl, alt= title).item__img

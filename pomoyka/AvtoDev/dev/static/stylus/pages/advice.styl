@@ -1,4 +1,124 @@
+// BANNER
 .advice-page
-	// BANNER
 	.main-banner
 		background url("../img/content/advice-banner.jpg") center center
+
+
+//ENTRY
+.entry
+	padding 60px 0px
+	background-color grayColor
+	
+	.container
+		display flex
+		justify-content space-between
+		align-items center
+
+.entry-text
+	max-width 480px
+	width 100%
+	
+	&__title
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+		margin-bottom 20px
+		text-transform uppercase
+		
+		&::after
+			content ""
+			display block
+			width 60px
+			height 3px
+			background-color orangeColor
+			margin-top 20px	
+			
+	&__description
+		font-size rem(14)
+		color darkGrayColor
+		margin-bottom 20px
+
+.about-entry
+	
+	&__title
+		font-family boldFont
+		font-weight 700
+		margin-bottom 15px
+	
+	&__list
+		margin-left 20px
+
+	&__item
+		font-size rem(14)
+		color darkGrayColor
+		font-family semiboldFont
+		margin-bottom 7px
+		
+		&:last-child
+			margin-bottom 0
+	
+	&__link
+		display flex
+		align-items center
+
+.icon-inner
+	display flex
+	justify-content center
+	align-items center
+	size(40px)
+	border-radius 50%
+	border 2px solid orangeColor
+	margin-right 15px
+	
+	.icon
+		fill orangeColor
+		size(25px)
+
+//ITEMS
+
+
+.items
+	position static
+	
+.item
+	background-color white
+	
+	&-dark
+		background-color grayColor
+		
+		.container
+			flex-direction row-reverse
+		
+	.container
+		display flex
+		align-items center
+		justify-content space-between
+		padding 50px 0px
+		
+.item-text
+	max-width 500px
+	width 100%
+	justify-content space-between
+	
+	&__title
+		font-size rem(20)
+		font-family boldFont
+		font-weight 700
+		margin-bottom 30px
+		
+		&::after
+			content ""
+			display block
+			width 60px
+			height 3px
+			margin-top 20px
+			background-color orangeColor
+	&__description
+		font-size rem(14)
+		color darkGrayColor
+		margin-bottom 30px
+		text-indent 20px
+		
+
+	.main-button
+		max-width 180px

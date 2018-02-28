@@ -37,12 +37,12 @@ $(document).ready(function () {
                 $(".tab-item").removeClass('is-active').eq(elemActive.index()).addClass('is-active');
         }, 10000)
     })(jQuery);
-    var originalBGplaypen = $(".tab-button").css("background-color"),
+    var originalBGplaypen = $(".main-button").css("background-color"),
                 x, y, xy, bgWebKit, bgMoz,
                 lightColor = "rgba(255,50,0,0.75)",
                 gradientSize = 80;
 
-        $('.tab-button').mousemove(function(event) {
+        $('.main-button').mousemove(function(event) {
 
             x  = event.pageX - this.offsetLeft;
             y  = event.pageY - this.offsetTop;

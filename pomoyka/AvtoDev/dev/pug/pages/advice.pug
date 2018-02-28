@@ -1,9 +1,11 @@
 extends ../layout/main
 
 block variables
-	- var title = 'Советы автолюбителям'
+	- var title = 'Советы автолюбителям | InfoAvto24'
 	- var pageClass = 'advice-page'
 	
 block content
 	include advice/main-banner
 	include index/social
+	include advice/entry
+	include advice/items
