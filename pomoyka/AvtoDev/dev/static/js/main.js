@@ -37,5 +37,25 @@ $(document).ready(function () {
                 $(".tab-item").removeClass('is-active').eq(elemActive.index()).addClass('is-active');
         }, 10000)
     })(jQuery);
+    var originalBGplaypen = $(".tab-button").css("background-color"),
+                x, y, xy, bgWebKit, bgMoz,
+                lightColor = "rgba(255,50,0,0.75)",
+                gradientSize = 80;
 
+        $('.tab-button').mousemove(function(event) {
+
+            x  = event.pageX - this.offsetLeft;
+            y  = event.pageY - this.offsetTop;
+            xy = x + " " + y;
+               
+            bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(255,255,255,0.0))), " + originalBGplaypen;
+            bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
+
+            $(this)
+                .css({ background: bgWebKit })
+                .css({ background: bgMoz });
+
+        }).mouseleave(function() {
+            $(this).css({ background: originalBGplaypen });
+        });
 });
