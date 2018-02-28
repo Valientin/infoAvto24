@@ -8,14 +8,13 @@ section.article
 				.article-head
 					span.article-head__name Ваз 2110
 					span.article-head__title Ремонт МКПП
-					span.article-head__part Статьи раздела
+					span.article-head__part Статьи разделa
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							+article("Наличие подтеков трансмиссионного масла")
-							+article("Работоспособность подшипников как основных, так и игольчатых")
-							+article("Состояние синхронизаторов и вилок выбора передач")
-							+article("Выработка оси и шестерней сателлитов")
+							each link,title in article.vaz2110
+								li
+									a(href= link title= title).article-nav__link= title
 			.artcle-item
 				.article-head.active
 					span.article-head__name Ваз 2109
@@ -25,10 +24,9 @@ section.article
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							+article("Диагностика подвески автомобиля") 
-							+article("Замена тормозных колодок,трубок, шлангов и суппортов")
-							+article("Замена резиноуплотнительных элементов и ступичных подшипников")
-							+article("Диагностика и регулировка подшипника ступицы")
+							each link,title in article.vaz2109
+								li
+									a(href= link title= title).article-nav__link= title
 			.artcle-item
 				.article-head
 					span.article-head__name Ваз Piora
@@ -37,7 +35,6 @@ section.article
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							+article("Ремонт главного цилиндра сцепления")
-							+article("Ремонт главного цилиндра сцепления")
-							+article("Признаки износа и поломки сцепления")
-							+article("Замена и ремонт ведомого диска")
+							each link,title in article.vazPriora
+								li
+									a(href= link title= title).article-nav__link= title
