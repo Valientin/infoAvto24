@@ -8,18 +8,13 @@ section.article
 				.article-head
 					span.article-head__name Ваз 2110
 					span.article-head__title Ремонт МКПП
-					span.article-head__part Статьи раздела
+					span.article-head__part Статьи разделa
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							li
-								a.article-nav__link(href="javascript:void(0);") Наличие подтеков трансмиссионного масла
-							li
-								a.article-nav__link(href="javascript:void(0);") Работоспособность подшипников как основных, так и игольчатых
-							li
-								a.article-nav__link(href="javascript:void(0);") Состояние синхронизаторов и вилок выбора передач
-							li
-								a.article-nav__link(href="javascript:void(0);") Выработка оси и шестерней сателлитов
+							each link,title in article.vaz2110
+								li
+									a(href= link title= title).article-nav__link= title
 			.artcle-item
 				.article-head.active
 					span.article-head__name Ваз 2109
@@ -29,14 +24,9 @@ section.article
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							li
-								a.article-nav__link(href="javascript:void(0);") Диагностика подвески автомобиля
-							li
-								a.article-nav__link(href="javascript:void(0);") Замена тормозных колодок,трубок, шлангов и суппортов
-							li
-								a.article-nav__link(href="javascript:void(0);") Замена резиноуплотнительных элементов и ступичных подшипников
-							li
-								a.article-nav__link(href="javascript:void(0);") Диагностика И регулировка подшипника ступицы
+							each link,title in article.vaz2109
+								li
+									a(href= link title= title).article-nav__link= title
 			.artcle-item
 				.article-head
 					span.article-head__name Ваз Piora
@@ -45,11 +35,6 @@ section.article
 				.article-bot
 					nav.article-nav
 						ul.acticle-nav__list
-							li
-								a.article-nav__link(href="javascript:void(0);") Ремонт главного цилиндра сцепления
-							li
-								a.article-nav__link(href="javascript:void(0);") Ремонт главного цилиндра сцепления
-							li
-								a.article-nav__link(href="javascript:void(0);") Признаки износа и поломки сцепления
-							li
-								a.article-nav__link(href="javascript:void(0);") Замена и ремонт ведомого <br>диска
+							each link,title in article.vazPriora
+								li
+									a(href= link title= title).article-nav__link= title
