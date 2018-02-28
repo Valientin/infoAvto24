@@ -1,23 +1,33 @@
 footer
 	.container
-		.social-nav
-			ul.social-nav__list
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("vk")
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("twitter")
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("telegram")
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("facebook")
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("pinterest")
-				li.social-nav__item
-					a(href="#").social-nav__link
-						+icon("instagram") 
-		span.all-right © 2018 INFOAVTO24. Все права защищены.
+		.footer-left
+			.logo
+				a(href="index.html").logo__text  Info#[span.info__title--selected Avto]24
+			span.footer-text Ремонт и обслуживание ваз своими руками
+			.footer-contact
+				a(href="mailto:info-avto24@gmail.com").footer-contact__mail 
+					+icon("mail")
+					|info-avto24@gmail.com
+		.footer-right
+			.social-nav
+				ul.social-nav__list
+					li.social-nav__item
+						a(href="#").social-nav__link.social-nav__link--vk
+							+icon("vk")
+					li.social-nav__item
+						a(href="#").social-nav__link
+							+icon("twitter")
+					li.social-nav__item
+						a(href="#").social-nav__link
+							+icon("telegram")
+					li.social-nav__item
+						a(href="#").social-nav__link
+							+icon("facebook")
+					li.social-nav__item
+						a(href="#").social-nav__link
+							+icon("pinterest")
+					li.social-nav__item
+						a(href="#").social-nav__link
+							+icon("instagram") 
+			span.footer-description Все материалы сайта INFOAVTO24 написаны специально для данного веб-ресурса и являются интеллектуальной собственностью администратора. Публикация материалов сайта на Вашем сайте возможна только при указании полной активной ссылки на источник. 
+			span.all-right © 2018 INFOAVTO24. Все права защищены.

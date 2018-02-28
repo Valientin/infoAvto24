@@ -1,0 +1,569 @@
+// BANNER
+
+.main-banner
+	padding 80px 0
+	background url("../img/content/main-banner.jpg")
+	background-size cover
+	background-position center center
+	position relative
+	border-bottom 5px solid darkGrayColor
+	
+	.container
+		display flex
+		align-items center
+		justify-content space-between
+		
+.info
+	max-width 540px
+	width 100%
+	display flex
+	flex-direction column
+	align-items flex-start
+		
+	&__title
+		text-transform uppercase
+		font-size rem(50)
+		font-family ralboldFont
+		font-weight 700
+		margin-bottom 10px
+		color white
+		
+		&--selected
+			color orangeColor
+			
+	&__quote
+		display block
+		font-family titleFont
+		font-size rem(36)
+		color white
+		text-transform uppercase
+		text-shadow 0px 0px 10px black
+		margin-bottom 30px
+		
+		&::after
+			
+			content ""
+			display block
+			margin-top 30px
+			height 2px
+			width 50px
+			background-color white
+	
+	&__description
+		color white
+		font-weight 300
+		line-height 23px
+		font-family titleFont
+		margin-bottom 30px
+		text-shadow 0px 0px 10px black
+		
+.advice
+	max-width 330px
+	width 100%
+	
+.advice-text
+	background-color grayColor
+	border-top-left-radius 5px
+	border-top-right-radius 5px
+	text-align center
+	padding 15px 0
+	
+	&__title
+		display inline-block
+		color black
+		font-family boldFont
+		font-weight 700
+		font-size rem(20)
+		
+		&--selected
+			color lightOrangeColor
+
+.advice-form
+	text-align center
+	background-color white
+	padding 30px 0 60px
+	
+	&__inpt
+		max-width 285px
+		min-width 250px
+		margin-bottom 35px
+		padding-left 10px
+		border none
+		box-shadow 0 1px 0 rgba(0, 0, 1, 0.16)
+		font-size rem(15)
+		padding-bottom 3px
+		width 100%
+		
+		&:last-child
+			margin-bottom 0
+			
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+			
+	::-webkit-input-placeholder 
+		color #cecece
+	::-moz-placeholder         
+		color #cecece
+	:-moz-placeholder           
+		color #cecece
+	:-ms-input-placeholder 
+		color #cecece
+
+// SOCIAL
+
+.social
+	border-bottom 2px solid rgba(0, 0, 0, 0.2)
+	
+	.container
+		display flex
+		justify-content space-between
+		align-items center
+		padding 20px 0
+
+.social-text
+	max-width 375px	
+	width 100%
+	
+	&__title
+		display block
+		font-size rem(20)
+		font-weight 700
+		margin-bottom 10px
+	
+	&__description
+		font-size rem(14)
+		line-height 20px
+		font-weight 400
+		color darkGrayColor
+
+.social-nav
+	margin-right 40px
+	
+	&__list
+		display flex
+		align-items center
+	&__item
+		margin-right 40px
+		
+		&:last-child
+			margin-right 0
+			
+	&__link
+		display block
+		
+		.icon
+			fill #ccc
+			size(40px)
+			transition .2s ease-in-out
+			
+			&:hover
+				fill orangeColor
+		&--vk
+			.icon
+				size(50px)		
+// CATEGORIES
+
+.categories
+	padding 80px 0
+	background-color grayColor
+	position static
+	
+	.container
+		display flex
+		align-items center
+		justify-content space-between
+
+.categories-nav
+	margin-right 100px
+	
+	&__item
+		display flex
+		justify-content center
+		align-items center
+		padding 35px 20px
+		background-color blackColor
+		white-space nowrap
+		color white
+		cursor pointer
+		margin-bottom 1px
+		font-size rem(15)
+		font-weight 700
+		
+		&:last-child
+			margin-bottom 0
+			
+		&.is-active
+			transition .3s ease-in-out
+			background-color #ff8c2d
+
+.categories-tab
+	width 100%
+
+.tab-item
+	display none
+	justify-content space-between
+	align-items center
+	transition .3s ease-in-out
+	
+	&.is-active
+		display flex
+		
+	&__img
+		display block
+		width 350px
+		
+		&--offset
+			width 280px
+			margin-right 40px
+
+.tab-info
+	max-width 480px
+	width 100%
+	margin-right 50px
+	
+	&__title
+		font-size rem(20)
+		font-weight 700
+		font-family boldFont
+		margin-bottom 50px
+		
+	&__description
+		font-size rem(14)
+		color darkGrayColor
+		margin-bottom 50px
+		
+		&--offset
+			display block
+			margin-top 20px
+
+// ADVANTAGE
+
+.advantage
+	padding 60px 0px
+	background-color grayColor
+
+.common-text
+	text-align center
+	margin-bottom 80px
+	
+	&__title
+		display inline-block
+		font-family titleFont
+		font-size rem(36)
+		text-transform uppercase
+		margin-bottom 20px
+		
+		&::after
+			content ""
+			display block
+			width 20%
+			height 2px
+			background-color lightOrangeColor
+			margin 15px auto 0 auto
+			
+	&__description
+		display block
+		font-size rem(14)
+		color darkGrayColor
+		font-weight 400
+
+.advantage-items
+	display flex
+	justify-content space-between
+	text-align center
+
+.advantage-item
+	max-width 380px
+	width 100%
+	display flex
+	flex-direction column
+	align-items center
+	justify-content space-between
+	
+	&__img
+		display flex
+		justify-content center
+		align-items center
+		size(70px)
+		border 2px solid lightOrangeColor
+		border-radius 50%
+		margin-bottom 15px
+		
+		.icon
+			size(35px)
+			fill lightOrangeColor
+			
+	&__title
+		font-family boldFont 
+		display block
+		font-size rem(20)
+		font-weight 700
+		max-width 280px
+		margin-bottom 20px
+		width 100%
+		
+	&__description
+		color darkGrayColor
+		font-size rem(16)
+		max-width 350px	
+		width 100%
+		line-height 20px
+
+//ARTICLE
+
+.article
+	padding 60px 0px
+	background-color white
+	
+.article-items
+	display flex
+	justify-content space-between
+	align-items flex-end
+
+.artcle-item
+	max-width 350px
+	width 100%
+
+.article-head
+	display flex
+	flex-direction column
+	align-items center
+	background-color lightBlackColor
+	text-align center
+	border-bottom 5px solid darkOrangeColor
+	margin-bottom 25px
+	position relative
+	
+	&::before
+		content ''
+		border 20px solid transparent
+		border-top 20px solid orangeColor
+		position absolute
+		top 100%
+		transform translateX(-50%)
+		left 50%
+		
+	&__name
+		width 100%
+		padding 15px 0px
+		color white
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+		border-bottom 1px solid white
+		text-transform uppercase
+		
+	&__title
+		width 100%
+		padding 35px 0px
+		color white
+		cursor pointer
+		font-family ralboldFont
+		border-bottom 1px solid white
+		font-size rem(28)
+		transition 0.2s
+
+		&:hover
+			color orangeColor
+	
+	&__part
+		font-family semiboldFont
+		font-style italic
+		color white
+		opacity .5
+		padding 15px 0
+		font-size rem(14)
+
+
+	&__active
+		background-color darkOrangeColor
+		width 100%
+		color white
+		padding 15px 0
+		text-transform uppercase
+		font-family boldFont
+		font-weight 700
+		border-bottom none
+	
+.article-nav
+	background-color white
+
+	li
+		
+		&:hover
+			
+			.article-nav__link
+				background orangeColor
+				color white
+		
+	&__link
+		width 100%
+		display block
+		padding 15px
+		text-align center
+		font-size rem(14)
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		border 1px solid grayColor
+		margin-bottom 5px
+		cursor pointer
+		color darkGrayColor
+
+// COMMENT
+
+.comment
+	padding 60px 0px
+
+.comment-items
+	display flex
+	justify-content space-between
+
+	
+.comment-item
+	max-width 300px
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+
+	&__text
+		display block
+		background-color grayColor
+		padding 15px
+		position relative
+		font-size rem(14)
+		font-style italic
+		color darkGrayColor
+		border-radius 5px
+		margin-bottom 25px
+		line-height 22px
+		
+		&.offset
+			padding 10px
+		
+		&:after
+			content ""
+			position absolute
+			top 100%	
+			left 25px
+			border 13px solid transparent 
+			border-top 17px solid grayColor
+			
+
+.comment-person
+	display flex
+	align-items center
+	
+	&__foto
+		margin-right 15px
+		
+.person-text
+	
+	&__name
+		display block
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+	
+	&__work 
+		display block
+		font-size rem(14)
+		color darkGrayColor
+
+// FEEDBACK
+
+.feedback
+	background url("../img/content/feedback-banner.jpg") no-repeat center center
+	background-size cover
+	padding 65px 0px
+	
+	.info-button
+		margin auto
+		display block
+		
+.feedback-text
+	margin-bottom 40px
+	
+	&__title
+		color white 
+		margin-bottom 30px
+		
+		&:after
+			background-color white
+			margin-top 20px
+	&__description
+		font-size rem(16)
+
+// CONTACT
+
+.contact
+	padding 60px 0px
+	position static
+
+.form-info-inner
+	display flex
+	margin-bottom 40px
+	
+.contact-form
+	
+	.tab-button
+		display block
+		margin auto
+		
+.form-info
+	margin-right 30px
+	
+	input
+		margin-bottom 30px
+		max-width 530px
+		width 100%
+		border none
+		border-bottom 1px solid lightGrayColor
+		padding 10px 0 10px 10px
+		
+		&:last-child
+			margin-bottom 0
+		
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+	
+	&__text
+		max-width 530px
+		width 100%
+		border none
+		border-bottom 1px solid lightGrayColor
+		font-size rem(14)
+		outline none
+		line-height 25px
+		padding 10px 0 10px 10px
+		
+		&:focus::-webkit-input-placeholder
+			color transparent
+		&:focus::-moz-placeholder
+			color transparent
+		&:focus:-moz-placeholder
+			color transparent
+		&:focus:-ms-input-placeholder
+			color transparent
+		
+::-webkit-input-placeholder 
+	color #cecece
+::-moz-placeholder         
+	color #cecece
+:-moz-placeholder           
+	color #cecece
+:-ms-input-placeholder 
+	color #cecece
