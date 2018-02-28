@@ -4,14 +4,16 @@ mixin icon(name,mod)
 		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
 
 
-mixin item(title,description,imgUrl,count)
+mixin item(title,imgUrl,count,p1,p2,p3)
 	
 	if(count)
 		.item.item-dark
 			.container
 				.item-text
 					.item-text__title= title
-					.item-text__description= description
+					p.item-text__description= p1
+					p.item-text__description= p2
+					p.item-text__description= p3
 					.main-button Читать статью
 				img(src= imgUrl, alt= title).item__img
 	else
@@ -19,6 +21,8 @@ mixin item(title,description,imgUrl,count)
 			.container
 				.item-text
 					.item-text__title= title
-					.item-text__description= description
+					p.item-text__description= p1
+					p.item-text__description= p2
+					p.item-text__description= p3
 					.main-button Читать статью
 				img(src= imgUrl, alt= title).item__img
