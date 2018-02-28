@@ -1,0 +1,58 @@
+.comment
+	padding 60px 0px
+
+.comment-items
+	display flex
+	justify-content space-between
+
+	
+.comment-item
+	max-width 300px
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+
+	&__text
+		display block
+		background-color grayColor
+		padding 15px
+		position relative
+		font-size rem(14)
+		font-style italic
+		color darkGrayColor
+		border-radius 5px
+		margin-bottom 25px
+		line-height 22px
+		
+		&.offset
+			padding 10px
+		
+		&:after
+			content ""
+			position absolute
+			top 100%	
+			left 25px
+			border 13px solid transparent 
+			border-top 17px solid grayColor
+			
+
+.comment-person
+	display flex
+	align-items center
+	
+	&__foto
+		margin-right 15px
+		
+.person-text
+	
+	&__name
+		display block
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+	
+	&__work 
+		display block
+		font-size rem(14)
+		color darkGrayColor

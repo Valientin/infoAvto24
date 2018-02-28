@@ -1,0 +1,98 @@
+.article
+	padding 60px 0px
+	background-color white
+	
+.article-items
+	display flex
+	justify-content space-between
+	align-items flex-end
+
+.artcle-item
+	max-width 350px
+	width 100%
+
+.article-head
+	display flex
+	flex-direction column
+	align-items center
+	background-color lightBlackColor
+	text-align center
+	border-bottom 5px solid darkOrangeColor
+	margin-bottom 25px
+	position relative
+	
+	&::before
+		content ''
+		border 20px solid transparent
+		border-top 20px solid orangeColor
+		position absolute
+		top 100%
+		transform translateX(-50%)
+		left 50%
+		
+	&__name
+		width 100%
+		padding 15px 0px
+		color white
+		font-family boldFont
+		font-size rem(20)
+		font-weight 700
+		border-bottom 1px solid white
+		text-transform uppercase
+		
+	&__title
+		width 100%
+		padding 35px 0px
+		color white
+		cursor pointer
+		font-family ralboldFont
+		border-bottom 1px solid white
+		font-size rem(28)
+		transition 0.2s
+
+		&:hover
+			color orangeColor
+	
+	&__part
+		font-family semiboldFont
+		font-style italic
+		color white
+		opacity .5
+		padding 15px 0
+		font-size rem(14)
+
+
+	&__active
+		background-color darkOrangeColor
+		width 100%
+		color white
+		padding 15px 0
+		text-transform uppercase
+		font-family boldFont
+		font-weight 700
+		border-bottom none
+	
+.article-nav
+	background-color white
+
+	li
+		
+		&:hover
+			
+			.article-nav__link
+				background orangeColor
+				color white
+		
+	&__link
+		width 100%
+		display block
+		padding 15px
+		text-align center
+		font-size rem(14)
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		border 1px solid grayColor
+		margin-bottom 5px
+		cursor pointer
+		color darkGrayColor
