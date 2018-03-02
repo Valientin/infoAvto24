@@ -3,4 +3,14 @@ header
 		.logo
 			a(href="index.html").logo__link
 				+icon("logo")
-		include ../pages/index/menu
+		.main-nav-wrapper
+			include menu
+		
+		.search
+			+icon("search")
+			input(type="text" placeholder="Поиск").search__input
+			+icon("cancel")
+		.mobile-menu
+			.mobile-menu__line.mobile-menu__line--top
+			.mobile-menu__line.mobile-menu__line--middle
+			.mobile-menu__line.mobile-menu__line--bottom

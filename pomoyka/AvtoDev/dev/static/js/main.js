@@ -3,10 +3,35 @@ $(document).ready(function () {
 
     (function dropDownMenu($){
 
+        let $search = $(".search");
 		$(".main-nav__item--repair").hover(function(){
 			$(this).find(".repair-nav-wrapper").toggleClass('is-active');
 		});
     	
+        $(".mobile-menu").click(function(){
+            $(this).toggleClass("is-open");
+        })
+
+        $search.click(function(){
+            $(this).css("max-width", "100%");
+            $(".main-nav-wrapper").addClass('search-active');
+        });
+
+       $(".search__input").focus(function(){
+            $search.find(".icon-search").addClass('search-active');
+        }).blur(function(){
+            $search.find(".icon-search").removeClass('search-active');
+        })
+
+        function handler(event) {
+          var target = $( event.target );
+          if ( !target.is( "header" ) ) {
+            console.log("kek");
+          }
+        }
+        // $( "ul" ).click(handler).find( "ul" ).hide();
+        $(".main-nav").click(handler);
+
     })(jQuery);
 
     (function maskInput($){
