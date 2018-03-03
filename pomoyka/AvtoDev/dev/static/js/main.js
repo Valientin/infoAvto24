@@ -17,11 +17,12 @@ $(document).ready(function () {
             $(this).addClass('search-active');
             $(".main-nav-wrapper").addClass('search-active');
             $(".cancel-wrapper").find(".icon-cancel").addClass('search-active');
+            $(".logo").addClass('search-active');
         });
 
        $(".search__input").focus(function(){
             $search.find(".icon-search").addClass('search-active');
-            $(".logo").addClass('search-active')
+            $(".logo").addClass('search-active');
         }).blur(function(){
             $search.find(".icon-search").removeClass('search-active');
         })
@@ -33,7 +34,7 @@ $(document).ready(function () {
                 $search.removeClass('search-active');
                 $(".main-nav-wrapper").removeClass('search-active').addClass('is-animated');
                 $(".cancel-wrapper").find(".icon-cancel").removeClass('search-active');
-                 $(".logo").removeClass('search-active')
+                $(".logo").removeClass('search-active')
             }
         })
 
