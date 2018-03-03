@@ -71,8 +71,8 @@ $(document).ready(function () {
 
     var originalBGplaypen = $(".main-button").css("background-color"),
                 x, y, xy, bgWebKit, bgMoz,
-                lightColor = "rgba(255,50,0,0.75)",
-                gradientSize = 80;
+                lightColor = "rgba(255,80,0,0.9)",
+                gradientSize = 120;
 
         $('.main-button').mousemove(function(event) {
 
