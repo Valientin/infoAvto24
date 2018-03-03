@@ -1,0 +1,111 @@
+@media (max-width: 1100px)
+	.repair-nav-wrapper.is-active
+		display none
+		
+@media (max-width: 950px)
+	.advice
+		max-width 310px
+	.info
+		max-width 380px
+		
+		&__title
+			font-size rem(36)
+			
+		&__quote
+			font-size rem(24)
+			
+		&__description
+			font-size rem(16)
+		
+	.social
+		.container
+			flex-direction column
+			align-items center
+			
+	.social-text
+		
+		&__title
+			text-align center
+			margin-bottom 20px
+			
+		&__description
+			display block
+			margin-bottom 20px
+			text-align center
+			
+	.social-nav
+		margin-right 0
+
+		
+@media (max-width: 900px)
+	.main-nav-wrapper
+		display none
+		
+	.mobile-menu
+		display block
+		
+	.search
+		margin-left auto
+		
+	.repair-nav-wrapper
+		display none
+		
+@media (max-width: 750px)
+	section.main-banner
+		padding 40px 0
+	.main-banner
+			.container
+				justify-content center
+				
+		.advice
+			display none
+			
+		.info
+			text-align center
+			
+	.info
+		max-width 380px
+		
+		&__title
+			font-size rem(40)
+			margin-left auto
+			margin-right auto
+			
+		&__quote
+			font-size rem(26)
+			
+			&::after
+				margin-left auto
+				margin-right auto
+				width 100px
+				
+		&__description
+			font-size rem(18)
+		
+	.info-button
+		margin-left auto
+		margin-right auto
+		
+@media (max-width: 500px)
+
+	.social-nav
+		width 100%
+		&__list
+			display flex
+			justify-content space-around
+		&__item
+			margin-right 0
+		&__link
+			.icon
+				size(30px)
+				
+			&--vk
+				.icon
+					size(35px)	
+@media (max-width: 400px)
+	.logo
+		.icon
+			width 120px
+		
+	.search
+		display none
