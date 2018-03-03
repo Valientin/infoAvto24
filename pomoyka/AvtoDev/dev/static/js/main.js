@@ -28,9 +28,9 @@ $(document).ready(function () {
         $(document).click(function(event){
             let header = $("header");
             let iconCancel = $(".icon-cancel");
-            if(!header.is(event.target) && header.has(event.target).length === 0 || iconCancel.is(event.target)){
+            if(!header.is(event.target) && header.has(event.target).length === 0 || iconCancel.is(event.target) || iconCancel.children().is(event.target)){
                 $search.removeClass('search-active');
-                $(".main-nav-wrapper").removeClass('search-active');
+                $(".main-nav-wrapper").removeClass('search-active').addClass('is-animated');
                 $(".cancel-wrapper").find(".icon-cancel").removeClass('search-active');
             }
         })

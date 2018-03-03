@@ -14,8 +14,12 @@ header
 	align-items center
 	height 100%
 	
+	
 	&.search-active
 		display none
+	
+	&.is-animated
+		animation search-nav-show .3s ease-in-out
 		
 .logo
 	display flex
@@ -253,3 +257,14 @@ header
 		color lightGrayColor
 		font-family boldFont
 		font-weight 700
+		
+@keyframes search-nav-show{
+	0% {
+		transform scale(0)
+		display flex
+	}
+	
+	100% {
+		transform scale(1)
+	}
+}
