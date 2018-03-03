@@ -36,7 +36,7 @@ $(document).ready(function () {
                 $(".main-nav-wrapper").removeClass('search-active').addClass('is-animated');
                 $(".cancel-wrapper").find(".icon-cancel").removeClass('search-active');
                 $(".logo").removeClass('search-active')
-                $(".search__input").val("");
+                $(".search__input").val("").blur();
             }
         })
 
