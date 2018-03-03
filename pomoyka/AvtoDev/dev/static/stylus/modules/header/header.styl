@@ -1,7 +1,7 @@
 header
 	background-color black
 	height 60px
-	
+	min-height 60px
 	.container
 		position relative
 		height 100%	
@@ -14,13 +14,16 @@ header
 	align-items center
 	height 100%
 	
+	
 	&.search-active
 		display none
+	
+	&.is-animated
+		animation search-nav-show .3s ease-in-out
 		
 .logo
 	display flex
 	align-items center
-	margin-right 35px
 	
 	&.search-active
 		margin-right 35px
@@ -173,10 +176,16 @@ header
 	display flex 
 	align-items center
 	cursor pointer
-	transition all .2s ease-in-out
+	transition all .1s ease-in-out
 	max-width 122px
 	width 100%
-
+	border-left 1px solid darkGrayColor
+	border-right 1px solid darkGrayColor
+	padding 0 20px
+	
+	&.search-active
+		max-width 100%
+		
 	&:hover
 		
 		.icon-search
@@ -184,36 +193,34 @@ header
 		
 		.search__text
 			color orangeColor
-			
-	&::after
-		content ""
-		display inline-block
-		height 100%
-		width 1px
-		background-color darkGrayColor
-		margin-left 20px
-	
-	&::before
-		content ""
-		display inline-block
-		height 100%
-		width 1px
-		background-color darkGrayColor
-		margin-right 19px
 		
 	.icon-search
 		fill lightGrayColor
+		min-width 20px
 		width 45px
 		height 20px
+		min-height 20px
 		margin-right 10px
 		
 		&.search-active
 			fill orangeColor
 			
-	.icon.icon-cancel
-		size(25px)
-		fill darkGrayColor
-		display none	
+	.cancel-wrapper	
+		width auto
+		height auto
+			
+		.icon-cancel
+			size(25px)
+			fill darkGrayColor
+			display none	
+			transition all .2 ease-in-out
+			z-index 10
+			
+			&:hover
+				fill white
+
+			&.search-active
+				display block
 		
 
 	&__input
@@ -222,18 +229,10 @@ header
 		width 100%
 		height 100%
 		color white
-		// display none
-	
-		&:focus::-webkit-input-placeholder
-			color transparent
-		&:focus::-moz-placeholder
-			color transparent
-		&:focus:-moz-placeholder
-			color transparent
-		&:focus:-ms-input-placeholder
-			color transparent
-			
-	::-webkit-input-placeholder 
+		min-width 55px
+		font-size rem(18)
+	::-webkit-input-placeholder
+		font-size rem(16)
 		color lightGrayColor
 		font-family boldFont
 		font-weight 700
@@ -249,3 +248,13 @@ header
 		color lightGrayColor
 		font-family boldFont
 		font-weight 700
+		
+@keyframes search-nav-show{
+	0%, 50%{
+		transform scale(0)
+	}
+	
+	100% {
+		transform scale(1)
+	}
+}

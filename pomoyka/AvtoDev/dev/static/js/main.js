@@ -4,6 +4,7 @@ $(document).ready(function () {
     (function dropDownMenu($){
 
         let $search = $(".search");
+
 		$(".main-nav__item--repair").hover(function(){
 			$(this).find(".repair-nav-wrapper").toggleClass('is-active');
 		});
@@ -13,24 +14,31 @@ $(document).ready(function () {
         })
 
         $search.click(function(){
-            $(this).css("max-width", "100%");
+            $(this).addClass('search-active');
             $(".main-nav-wrapper").addClass('search-active');
+            $(".cancel-wrapper").find(".icon-cancel").addClass('search-active');
+            $(".logo").addClass('search-active');
+            $(".search__input").focus();
         });
 
        $(".search__input").focus(function(){
             $search.find(".icon-search").addClass('search-active');
+            $(".logo").addClass('search-active');
         }).blur(function(){
             $search.find(".icon-search").removeClass('search-active');
         })
 
-        function handler(event) {
-          var target = $( event.target );
-          if ( !target.is( "header" ) ) {
-            console.log("kek");
-          }
-        }
-        // $( "ul" ).click(handler).find( "ul" ).hide();
-        $(".main-nav").click(handler);
+        $(document).click(function(event){
+            let header = $("header");
+            let iconCancel = $(".icon-cancel");
+            if(!header.is(event.target) && header.has(event.target).length === 0 || iconCancel.is(event.target) || iconCancel.children().is(event.target)){
+                $search.removeClass('search-active');
+                $(".main-nav-wrapper").removeClass('search-active').addClass('is-animated');
+                $(".cancel-wrapper").find(".icon-cancel").removeClass('search-active');
+                $(".logo").removeClass('search-active')
+                $(".search__input").val("");
+            }
+        })
 
     })(jQuery);
 
@@ -62,10 +70,11 @@ $(document).ready(function () {
                 $(".tab-item").removeClass('is-active').eq(elemActive.index()).addClass('is-active');
         }, 10000)
     })(jQuery);
+
     var originalBGplaypen = $(".main-button").css("background-color"),
                 x, y, xy, bgWebKit, bgMoz,
-                lightColor = "rgba(255,50,0,0.75)",
-                gradientSize = 80;
+                lightColor = "rgba(255,80,0,0.9)",
+                gradientSize = 120;
 
         $('.main-button').mousemove(function(event) {
 
