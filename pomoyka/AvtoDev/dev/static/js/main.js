@@ -18,6 +18,7 @@ $(document).ready(function () {
             $(".main-nav-wrapper").addClass('search-active');
             $(".cancel-wrapper").find(".icon-cancel").addClass('search-active');
             $(".logo").addClass('search-active');
+            $(".search__input").focus();
         });
 
        $(".search__input").focus(function(){
