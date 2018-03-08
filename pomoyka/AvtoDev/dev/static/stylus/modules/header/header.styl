@@ -26,12 +26,18 @@ header
 	display flex
 	align-items center
 	margin-right 17px
+	outline none
 		
 	.icon
 		fill white
-		width 150px
-		height 50px
+		width 140px
+		height 40px
+		transition .2s ease-in-out
+		user-select none
 		
+		&:hover
+			transform-origin 50% 50%
+			transform scale(1.1)
 
 .main-nav
 	height 100%
